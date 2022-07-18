@@ -25,7 +25,9 @@ def create_app(enviroment):
         db.create_all()
 
     return app
-
+    
+import pymysql
+pymysql.install_as_MySQLdb()
 app = create_app(config['development'])
 api = Api(app)
 
